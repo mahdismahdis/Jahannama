@@ -1,0 +1,295 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% load i18n static %}
+
+{% block content %}
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+
+        <!-- متن -->
+        <div class="hero-content reveal">
+
+            <span class="hero-badge">
+                {% trans "کیفیت ممتاز صادراتی" %}
+            </span>
+
+            <h1>
+                {% trans "فرآورده‌های لبنی با استاندارد بین‌المللی" %}
+            </h1>
+
+            <p>
+                {% trans "جهان نما، ارائه‌دهنده محصولات لبنی مرغوب برای بازارهای داخلی و صادراتی با تضمین کیفیت و اصالت" %}
+            </p>
+
+            <div class="hero-actions">
+                {% for item in category_list %}
+                <a href="{% url 'myapp:category_product' item.id %}" class="btn btn-primary">
+                    {% trans "مشاهده محصولات" %}
+                </a>
+                {% endfor %}
+                <a href="{% url 'myapp:about' %}" class="btn btn-outline-light">
+                    {% trans "درباره برند" %}
+                </a>
+            </div>
+
+
+
+        </div>
+
+        <!-- تصویر -->
+        <div class="hero-product reveal reveal-delay-1">
+
+            <img src="{% static 'myapp/image/Banner1.png' %}" alt="Jahan Nama">
+
+        </div>
+
+    </div>
+
+</section>
+<div class="hero-stats">
+
+    <div class="hero-stat">
+        <span class="hero-stat-value">{% trans "۱۳۸۹" %}</span>
+        <span class="hero-stat-label">{% trans "سال تأسیس" %}</span>
+    </div>
+
+    <div class="hero-stat">
+        <span class="hero-stat-value">{% trans "صادراتی" %}</span>
+        <span class="hero-stat-label">{% trans "کیفیت بین‌المللی" %}</span>
+    </div>
+
+    <div class="hero-stat">
+        <span class="hero-stat-value">{% trans "100%" %}</span>
+        <span class="hero-stat-label">{% trans "مواد اولیه مرغوب" %}</span>
+    </div>
+</div>
+
+
+<section class="trust-section">
+
+    <div class="container">
+
+        <div class="trust-grid">
+
+            <div class="trust-card reveal">
+
+                <div class="trust-icon">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+
+                <h3>{% trans "کیفیت تضمین‌شده" %}</h3>
+
+                <p>{% trans "تولید با استانداردهای بهداشتی و کنترل کیفیت دقیق در تمام مراحل" %}</p>
+
+            </div>
+
+            <div class="trust-card reveal reveal-delay-1">
+
+                <div class="trust-icon">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20"/>
+                        <path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+
+                <h3>{% trans "صادرات بین‌المللی" %}</h3>
+
+                <p>{% trans "ارسال محصولات به بازارهای عربی و کشورهای منطقه" %}</p>
+
+            </div>
+
+            <div class="trust-card reveal reveal-delay-2">
+
+                <div class="trust-icon">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                </div>
+
+                <h3>{% trans "اصالت و اعتماد" %}</h3>
+
+                <p>{% trans "بیش از یک دهه تجربه در تولید فرآورده‌های لبنی باکیفیت" %}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Ghee Scientific Benefits -->
+<section class="ghee-benefits">
+    <div class="container">
+
+        <div class="ghee-card reveal">
+
+            <div class="ghee-card-content">
+
+                <span class="ghee-label">
+                    {% trans "ترکیب غذایی و ارزش تغذیه‌ای" %}
+                </span>
+
+                <h2>
+                    {% trans "خواص و ارزش تغذیه‌ای روغن حیوانی" %}
+                </h2>
+
+                <p class="ghee-intro">
+                    {% trans "روغن حیوانی یک فرآورده لبنی با چربی بالا است که بخش عمده آن از اسیدهای چرب تشکیل شده و در کنار انرژی، حاوی ترکیبات محلول در چربی نیز می‌باشد." %}
+                </p>
+
+                <div class="ghee-benefits-grid">
+
+                    <div class="ghee-benefit">
+                        <div class="ghee-benefit-icon">01</div>
+
+                        <div>
+                            <h3>
+                                {% trans "منبع متراکم انرژی" %}
+                            </h3>
+
+                            <p>
+                                {% trans "چربی غذایی منبعی متراکم از انرژی است و هر گرم چربی حدود ۹ کیلوکالری انرژی فراهم می‌کند." %}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="ghee-benefit">
+                        <div class="ghee-benefit-icon">02</div>
+
+                        <div>
+                            <h3>
+                                {% trans "ویتامین‌های محلول در چربی" %}
+                            </h3>
+
+                            <p>
+                                {% trans "روغن حیوانی می‌تواند حاوی مقادیری از ویتامین‌های محلول در چربی مانند ویتامین‌های A و E باشد؛ مقدار آن به نوع شیر و فرآوری محصول بستگی دارد." %}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="ghee-benefit">
+                        <div class="ghee-benefit-icon">03</div>
+
+                        <div>
+                            <h3>
+                                {% trans "حاوی اسیدهای چرب" %}
+                            </h3>
+
+                            <p>
+                                {% trans "این محصول حاوی ترکیبی از اسیدهای چرب اشباع و غیراشباع است و ترکیب دقیق آن به منبع شیر و شرایط تولید بستگی دارد." %}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="ghee-benefit">
+                        <div class="ghee-benefit-icon">04</div>
+
+                        <div>
+                            <h3>
+                                {% trans "فاقد آب و پروتئین قابل توجه" %}
+                            </h3>
+
+                            <p>
+                                {% trans "در فرآیند تولید روغن حیوانی، بخش عمده آب و مواد غیرچرب جدا می‌شود و محصول نهایی عمدتاً از چربی تشکیل می‌شود." %}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="ghee-benefit">
+                        <div class="ghee-benefit-icon">05</div>
+
+                        <div>
+                            <h3>
+                                {% trans "مناسب برای تأمین انرژی" %}
+                            </h3>
+
+                            <p>
+                                {% trans "به دلیل تراکم انرژی بالا، مصرف مقدار متعادل آن می‌تواند بخشی از انرژی مورد نیاز رژیم غذایی را تأمین کند." %}
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="ghee-benefit">
+                        <div class="ghee-benefit-icon">06</div>
+
+                        <div>
+                            <h3>
+                                {% trans "بدون کربوهیدرات قابل توجه" %}
+                            </h3>
+
+                            <p>
+                                {% trans "روغن حیوانی عمدتاً از چربی تشکیل شده و در حالت خالص، کربوهیدرات قابل توجهی ندارد." %}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ghee-note">
+                    <strong>
+                        {% trans "نکته تغذیه‌ای:" %}
+                    </strong>
+
+                    <span>
+                        {% trans "روغن حیوانی کالری و چربی اشباع بالایی دارد؛ بنابراین مصرف متعادل آن در کنار یک رژیم غذایی متنوع توصیه می‌شود." %}
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="ghee-card-image">
+
+<!--                <img-->
+<!--                    src="{% static 'myapp/image/ghee.png' %}"-->
+<!--                    alt="{% trans 'روغن حیوانی' %}"-->
+<!--                    loading="lazy"-->
+<!--                >-->
+
+<!--                <div class="ghee-image-badge">-->
+<!--                    <strong>-->
+<!--                        {% trans "طبیعی و سنتی" %}-->
+<!--                    </strong>-->
+
+<!--                    <span>-->
+<!--                        {% trans "فرآورده لبنی" %}-->
+<!--                    </span>-->
+<!--                </div>-->
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="brand-message">
+
+    <div class="container">
+
+        <span class="brand-line"></span>
+        <h2>
+            {% trans "تو سزاوار بهترین هستی" %}
+        </h2>
+        <p>
+            {% trans "ما بهترین کیفیت را برای سفره خانواده شما و بازارهای جهانی فراهم می‌کنیم." %}
+        </p>
+        <a href="{% url 'myapp:contact' %}" class="btn btn-primary">
+            {% trans "تماس با ما" %}
+        </a>
+
+    </div>
+
+</section>
+{% endblock %}

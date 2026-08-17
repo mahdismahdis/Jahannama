@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-14 23:13+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\myapp\templates\myapp\about.html:9 .\myapp\templates\myapp\base.html:44
+msgid "درباره ما"
+msgstr "About Us"
+
+msgid "تماس با ما"
+msgstr "Contact Us"
+
+#: .\myapp\templates\myapp\about.html:10
+msgid "آشنایی با شرکت فرآورده‌های لبنی رامیار"
+msgstr "About Ramyar Dairy Products Company"
+
+#: .\myapp\templates\myapp\base.html:42
+msgid "خانه"
+msgstr "Home"
+
+#: .\myapp\templates\myapp\base.html:43
+msgid "گالری"
+msgstr "Gallery"
+
+msgid "داستان ما"
+msgstr "Our Story"
+
+msgid "تجربه‌ای از کیفیت و اصالت"
+msgstr "A Legacy of Quality and Authenticity"
+
+msgid "شرکت فرآورده‌های لبنی رامیار تمیشه در سال ۱۳۸۹ تاسیس گشته و از آن زمان تاکنون با تکیه بر استانداردهای بین‌المللی، محصولات لبنی باکیفیت تولید می‌کند."
+msgstr "Ramyar Tamisheh Dairy Products Company was established in 2010 (1389 in the Persian calendar). Since then, it has been producing high-quality dairy products in accordance with international standards."
+
+msgid "این شرکت محصولات لبنی همچون روغن حیوانی و کره را به کشورهای عربی مانند عراق صادر می‌کند و در بازارهای داخلی و بین‌المللی جایگاه ویژه‌ای دارد."
+msgstr "The company exports dairy products such as natural ghee and butter to Arab countries, including Iraq, and has earned a distinguished position in both domestic and international markets."
+
+msgid "سال تأسیس"
+msgstr "Established"
+
+msgid "کد اقتصادی"
+msgstr "Economic Code"
+
+msgid "شناسه ملی"
+msgstr "National ID"
+
+msgid "ماموریت ما"
+msgstr "Our Mission"
+
+msgid "ارائه فرآورده‌های لبنی باکیفیت و استاندارد برای مصرف‌کنندگان داخلی و بین‌المللی"
+msgstr "Providing premium-quality dairy products that meet international standards for domestic and global consumers."
+
+msgid "چشم‌انداز"
+msgstr "Our Vision"
+
+msgid "تبدیل شدن به یکی از برندهای پیشرو صادرات محصولات لبنی در منطقه"
+msgstr "To become one of the leading dairy exporters in the region."
+
+msgid "ارزش‌ها"
+msgstr "Our Values"
+
+msgid "کیفیت، اصالت، اعتماد و تعهد به رضایت مشتری در تمام مراحل تولید و توزیع"
+msgstr "Quality, authenticity, trust, and commitment to customer satisfaction throughout every stage of production and distribution."
+
+msgid "۱۳۸۹"
+msgstr "2010"
+
+msgid "۴۱۱۳۷۶۳۴۵۹۸۸"
+msgstr "411376345988"
+
+msgid "۱۰۸۶۱۹۶۶۳۵"
+msgstr "1086196635"
+
+msgid "ما آماده پاسخگویی به شما هستیم"
+msgstr "We Are Ready to Assist You"
+
+msgid "شماره تماس"
+msgstr "Phone Number"
+
+msgid "آدرس کارخانه"
+msgstr "Factory Address"
+
+msgid "استان گلستان، شهرستان بندرگز، بخش مرکزی، دهستان انران شرقی، آبادی شهرک صنعتی بندرگز (خیابان صنعتی بندرگز)، کوچه صنعت ۳، پلاک ۰، قطعه ۳۰، طبقه همکف"
+msgstr "Golestan Province, Bandar Gaz County, Central District, Anbaran-e Sharqi Rural District, Bandar Gaz Industrial Town (Bandar Gaz Industrial Street), Sanat Alley 3, Plot 0, Lot 30, Ground Floor"
+
+msgid "کد پستی"
+msgstr "Postal Code"
+
+msgid "همکاری تجاری و سفارش عمده"
+msgstr "Business Cooperation & Bulk Orders"
+
+msgid "برای سفارش‌های صادراتی و همکاری‌های تجاری با ما تماس بگیرید"
+msgstr "Please contact us for export orders and business cooperation."
+
+msgid "تماس مستقیم"
+msgstr "Call Now"
+
+msgid "۴۸۷۷۱۸۵۴۱۱"
+msgstr "4877185411"
+
+msgid "۰۰۹۸۹۲۱۴۱۵۹۳۵۳"
+msgstr "00989214159353"
+
+msgid "کیفیت ممتاز صادراتی"
+msgstr "Premium Export Quality"
+
+msgid "فرآورده‌های لبنی با استاندارد بین‌المللی"
+msgstr "International Standard Dairy Products"
+
+msgid "جهان نما، ارائه‌دهنده محصولات لبنی مرغوب برای بازارهای داخلی و صادراتی با تضمین کیفیت و اصالت"
+msgstr "Jahan Nama provides premium dairy products for domestic and international markets with guaranteed quality and authenticity."
+
+msgid "مشاهده محصولات"
+msgstr "View Products"
+
+msgid "درباره برند"
+msgstr "About Our Brand"
+
+msgid "صادراتی"
+msgstr "Export"
+
+msgid "کیفیت بین‌المللی"
+msgstr "International Quality"
+
+msgid "مواد اولیه مرغوب"
+msgstr "Premium Raw Materials"
+
+msgid "کیفیت تضمین‌شده"
+msgstr "Guaranteed Quality"
+
+msgid "تولید با استانداردهای بهداشتی و کنترل کیفیت دقیق در تمام مراحل"
+msgstr "Produced under strict hygiene standards with comprehensive quality control at every stage."
+
+msgid "صادرات بین‌المللی"
+msgstr "International Export"
+
+msgid "ارسال محصولات به بازارهای عربی و کشورهای منطقه"
+msgstr "Supplying premium dairy products to Arab markets and neighboring countries."
+
+msgid "اصالت و اعتماد"
+msgstr "Authenticity & Trust"
+
+msgid "بیش از یک دهه تجربه در تولید فرآورده‌های لبنی باکیفیت"
+msgstr "More than a decade of experience in producing high-quality dairy products."
+
+msgid "مشاهده مجموعه"
+msgstr "View Collection"
+
+msgid "مجموعه"
+msgstr "Collection"
+
+msgid "کاوش محصولات"
+msgstr "Explore Products"
+
+msgid "در حال حاضر محصولی ثبت نشده است."
+msgstr "No products are currently available."
+
+msgid "همکاری در صادرات و توزیع"
+msgstr "Export & Distribution Partnership"
+
+msgid "برای سفارش، همکاری تجاری و اطلاعات بیشتر با ما در تماس باشید"
+msgstr "Contact us for orders, commercial partnerships, and further information."
+
+msgid "۱۰۰٪"
+msgstr "100%"
+
+msgid "دسترسی سریع"
+msgstr "Quick Access"
+
+msgid "فرآورده‌های لبنی با کیفیت صادراتی برای بازارهای بین‌المللی"
+msgstr "Export-Quality Dairy Products for International Markets"
+
+msgid "ارتباط با ما"
+msgstr "Get in Touch"
+
+msgid "جهان نما"
+msgstr "JAHAN NAMA"
+
+msgid "گالری تصاویر"
+msgstr "Product Gallery"
+
+msgid "نگاهی به محصولات و فعالیت‌های ما"
+msgstr "Take a Look at Our Products and Activities"
+
+msgid "تو سزاوار بهترین هستی"
+msgstr "You Deserve The Best"
+
+msgid "ما بهترین کیفیت را برای سفره خانواده شما و بازارهای جهانی فراهم می‌کنیم."
+msgstr "We provide the highest quality for your family’s table and global markets."
+
+msgid "محصولات"
+msgstr "Products"
+
+msgid "فرآورده های لبنی"
+msgstr "Dairy Products"
+
+msgid "بدون افزودنی و نگهدارنده"
+msgstr "No additives or preservatives"
+
+msgid "تهیه شده از گاوهای سالم"
+msgstr "Made from healthy cows"
+
+msgid "تولید شده با روش سنتی و بهداشتی"
+msgstr "Produced using traditional and hygienic methods"
+
+msgid "بسته‌بندی استاندارد"
+msgstr "Standard packaging"
+
+msgid "مشاهده محصول"
+msgstr "View Product"
+
+msgid "مجموعه ممتاز"
+msgstr "Premium Collection"
+
+msgid "بازگشت به دسته‌بندی‌ها"
+msgstr "Back to Categories"
+
+msgid "ترکیب غذایی و ارزش تغذیه‌ای"
+msgstr "Nutritional Composition and Value"
+
+msgid "خواص و ارزش تغذیه‌ای روغن حیوانی"
+msgstr "Properties and Nutritional Value of Ghee"
+
+msgid "روغن حیوانی یک فرآورده لبنی با چربی بالا است که بخش عمده آن از اسیدهای چرب تشکیل شده و در کنار انرژی، حاوی ترکیبات محلول در چربی نیز می‌باشد."
+msgstr "Ghee is a high-fat dairy product consisting mainly of fatty acids and providing energy along with fat-soluble compounds."
+
+msgid "منبع متراکم انرژی"
+msgstr "A Concentrated Source of Energy"
+
+msgid "چربی غذایی منبعی متراکم از انرژی است و هر گرم چربی حدود ۹ کیلوکالری انرژی فراهم می‌کند."
+msgstr "Dietary fat is a concentrated source of energy, providing approximately 9 kilocalories per gram."
+
+msgid "ویتامین‌های محلول در چربی"
+msgstr "Fat-Soluble Vitamins"
+
+msgid "روغن حیوانی می‌تواند حاوی مقادیری از ویتامین‌های محلول در چربی مانند ویتامین‌های A و E باشد؛ مقدار آن به نوع شیر و فرآوری محصول بستگی دارد."
+msgstr "Ghee may contain certain amounts of fat-soluble vitamins such as vitamins A and E; the amount depends on the type of milk and the processing method."
+
+msgid "حاوی اسیدهای چرب"
+msgstr "Contains Fatty Acids"
+
+msgid "این محصول حاوی ترکیبی از اسیدهای چرب اشباع و غیراشباع است و ترکیب دقیق آن به منبع شیر و شرایط تولید بستگی دارد."
+msgstr "This product contains a combination of saturated and unsaturated fatty acids, with its exact composition depending on the milk source and production conditions."
+
+msgid "فاقد آب و پروتئین قابل توجه"
+msgstr "Very Low in Water and Protein"
+
+msgid "در فرآیند تولید روغن حیوانی، بخش عمده آب و مواد غیرچرب جدا می‌شود و محصول نهایی عمدتاً از چربی تشکیل می‌شود."
+msgstr "During the production of ghee, most of the water and non-fat components are removed, leaving a product composed primarily of fat."
+
+msgid "مناسب برای تأمین انرژی"
+msgstr "Suitable for Energy Supply"
+
+msgid "به دلیل تراکم انرژی بالا، مصرف مقدار متعادل آن می‌تواند بخشی از انرژی مورد نیاز رژیم غذایی را تأمین کند."
+msgstr "Due to its high energy density, consuming it in moderation can provide part of the energy required in the diet."
+
+msgid "بدون کربوهیدرات قابل توجه"
+msgstr "Contains No Significant Carbohydrates"
+
+msgid "روغن حیوانی عمدتاً از چربی تشکیل شده و در حالت خالص، کربوهیدرات قابل توجهی ندارد."
+msgstr "Ghee consists primarily of fat and, in its pure form, contains no significant amount of carbohydrates."
+
+msgid "نکته تغذیه‌ای:"
+msgstr "Nutritional Note:"
+
+msgid "روغن حیوانی کالری و چربی اشباع بالایی دارد؛ بنابراین مصرف متعادل آن در کنار یک رژیم غذایی متنوع توصیه می‌شود."
+msgstr "Ghee is high in calories and saturated fat; therefore, moderate consumption as part of a varied and balanced diet is recommended."
+

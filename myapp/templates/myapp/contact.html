@@ -1,0 +1,49 @@
+{% extends 'myapp/base.html' %}
+{% load i18n %}
+{% block title %}{% translate "تماس با ما" %} — جهان نما{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+        <h1 class="reveal">{% translate "تماس با ما" %}</h1>
+        <p class="reveal reveal-delay-1">{% translate "ما آماده پاسخگویی به شما هستیم" %}</p>
+    </div>
+</section>
+
+<div class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-card reveal">
+                <div class="contact-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <h3>{% translate "شماره تماس" %}</h3>
+                <p><a href="tel:09214159353">{% translate "۰۰۹۸۹۲۱۴۱۵۹۳۵۳" %}</a></p>
+            </div>
+
+            <div class="contact-card reveal reveal-delay-1">
+                <div class="contact-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>{% translate "آدرس کارخانه" %}</h3>
+                <p>{% translate "استان گلستان، شهرستان بندرگز، بخش مرکزی، دهستان انران شرقی، آبادی شهرک صنعتی بندرگز (خیابان صنعتی بندرگز)، کوچه صنعت ۳، پلاک ۰، قطعه ۳۰، طبقه همکف" %}</p>
+            </div>
+
+            <div class="contact-card reveal reveal-delay-2">
+                <div class="contact-card-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+                </div>
+                <h3>{% translate "کد پستی" %}</h3>
+                <p>{% translate "۴۸۷۷۱۸۵۴۱۱" %}</p>
+            </div>
+        </div>
+
+        <div class="contact-cta reveal">
+            <h2>{% translate "همکاری تجاری و سفارش عمده" %}</h2>
+            <p>{% translate "برای سفارش‌های صادراتی و همکاری‌های تجاری با ما تماس بگیرید" %}</p>
+            <a href="tel:09214159353" class="btn btn-primary">{% translate "تماس مستقیم" %}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

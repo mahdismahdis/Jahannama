@@ -1,0 +1,69 @@
+{% extends 'myapp/base.html' %}
+{% load i18n %}
+{% block title %}درباره ما — جهان نما{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+        <h1 class="reveal">{% translate "درباره ما" %}</h1>
+        <p class="reveal reveal-delay-1">{% translate "آشنایی با شرکت فرآورده‌های لبنی رامیار" %}</p>
+    </div>
+</section>
+
+<div class="about-content">
+    <div class="about-intro reveal">
+        <div class="about-intro-text">
+            <span class="section-label">{% translate "داستان ما" %}</span>
+            <h2>{% translate "تجربه‌ای از کیفیت و اصالت" %}</h2>
+            <p>{% translate "شرکت فرآورده‌های لبنی رامیار تمیشه در سال ۱۳۸۹ تاسیس گشته و از آن زمان تاکنون با تکیه بر استانداردهای بین‌المللی، محصولات لبنی باکیفیت تولید می‌کند." %}</p>
+            <p>{% translate "این شرکت محصولات لبنی همچون روغن حیوانی و کره را به کشورهای عربی مانند عراق صادر می‌کند و در بازارهای داخلی و بین‌المللی جایگاه ویژه‌ای دارد." %}</p>
+        </div>
+        <div class="about-intro-visual">
+            <div class="about-visual-card">
+                <span class="about-visual-year">{% translate "۱۳۸۹" %}</span>
+                <span class="about-visual-label">{% translate "سال تأسیس" %}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-stats">
+        <div class="stat-item reveal">
+            <div class="stat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            </div>
+            <div class="stat-label">{% translate "کد اقتصادی" %}</div>
+            <div class="stat-value">{% translate "۴۱۱۳۷۶۳۴۵۹۸۸" %}</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+            </div>
+            <div class="stat-label">{% translate "شناسه ملی" %}</div>
+            <div class="stat-value">{% translate "۱۰۸۶۱۹۶۶۳۵" %}</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="stat-label">{% trans "سال تأسیس" %}</div>
+            <div class="stat-value">{% trans "۱۳۸۹" %}</div>
+        </div>
+    </div>
+
+    <div class="values-grid">
+        <div class="value-card reveal">
+            <h3>{% translate "ماموریت ما" %}</h3>
+            <p>{% translate "ارائه فرآورده‌های لبنی باکیفیت و استاندارد برای مصرف‌کنندگان داخلی و بین‌المللی" %}</p>
+        </div>
+        <div class="value-card reveal reveal-delay-1">
+            <h3>{% translate "چشم‌انداز" %}</h3>
+            <p>{% translate "تبدیل شدن به یکی از برندهای پیشرو صادرات محصولات لبنی در منطقه" %}</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+            <h3>{% translate "ارزش‌ها" %}</h3>
+            <p>{% translate "کیفیت، اصالت، اعتماد و تعهد به رضایت مشتری در تمام مراحل تولید و توزیع" %}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

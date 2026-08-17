@@ -1,0 +1,17 @@
+# Virtual Environment
+env/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Django
+staticfiles/
+*.log
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db

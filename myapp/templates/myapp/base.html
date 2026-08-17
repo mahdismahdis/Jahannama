@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+
+<p>Language: {{ LANGUAGE_CODE }}</p>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="جهان نما — فرآورده‌های لبنی با کیفیت صادراتی">
+    <title>{% block title %}جهان نما{% endblock %}</title>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="top-bar">
+        </div>
+
+        <header class="header">
+            <div class="container header-container">
+                <a href="{% url 'myapp:index' %}" class="logo-link">
+                    <img src="{% static 'myapp/image/logo.png' %}" alt="جهان نما" class="header-logo">
+                </a>
+
+                <button class="menu-toggle" aria-label="منو" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="navbar" aria-label="منوی اصلی">
+                    <ul>
+                        <li><a href="{% url 'myapp:index' %}">{% translate "خانه" %}</a></li>
+                        <li><a href="{% url 'myapp:gallery' %}">{% translate "گالری" %}</a></li>
+                        <li><a href="{% url 'myapp:about' %}">{% translate "درباره ما" %}</a></li>
+                        <li><a href="{% url 'myapp:contact' %}" class="nav-cta">{% translate "تماس با ما" %}</a></li>
+                    </ul>
+                </nav>
+
+                <div class="language-switcher">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <select name="language" onchange="this.form.submit()">
+                            <option value="fa" {% if LANGUAGE_CODE == "fa" %}selected{% endif%}> فارسی</option>
+                            <option value="en" {% if LANGUAGE_CODE == "en" %}selected{% endif %}>English</option>
+                            <option value="ar" {% if LANGUAGE_CODE == "ar" %}selected{% endif %}> العربية</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+
+            <div class="footer-glow"></div>
+
+            <div class="container">
+
+<!--                <div class="footer-brand">-->
+
+<!--                    <img src="{% static 'myapp/image/logo.png' %}" alt="Jahan Nama" class="footer-logo">-->
+
+<!--                    <p>-->
+<!--                        {% trans "Premium Iranian Dairy Products For International Markets" %}-->
+<!--                    </p>-->
+
+<!--                </div>-->
+
+                <div class="footer-grid">
+
+                    <div>
+
+                        <h3>{% trans "جهان نما" %}</h3>
+
+                        <ul>
+
+                            <li><a href="{% url 'myapp:about' %}">{% trans "درباره ما" %}</a></li>
+
+                            <li><a href="{% url 'myapp:gallery' %}">{% trans "گالری" %}</a></li>
+
+                            <li><a href="{% url 'myapp:contact' %}">{% trans "تماس با ما" %}</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h3>{% trans "محصولات" %}</h3>
+
+                        <ul>
+                            {% for item in category_list %}
+                            <li>
+                                <a href="{% url 'myapp:category_product' item.id %}">
+                                    {% if LANGUAGE_CODE == "en" %}
+                                        {{ item.name_en }}
+                                    {% elif LANGUAGE_CODE == "ar" %}
+                                        {{ item.name_ar }}
+                                    {% else %}
+                                        {{ item.name }}
+                                    {% endif %}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div>
+
+                        <h3>{% trans "ارتباط با ما" %}</h3>
+
+                        <ul>
+
+                            <li>info@jahannama.com</li>
+
+                            <li>+98 912 000 0000</li>
+
+                            <li>Tehran • Iran</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-social">
+
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                     <a href="#" class="social-btn">
+                         <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+
+                    <a href="#" class="social-btn">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>
+
+                <div class="footer-bottom">
+
+                    © 2026 Jahan Nama. All Rights Reserved.
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <button class="back-to-top" aria-label="بازگشت به بالا">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </button>
+    </div>
+
+    <script src="{% static 'myapp/main.js' %}"></script>
+    {% block body %}{% endblock %}
+</body>
+</html>

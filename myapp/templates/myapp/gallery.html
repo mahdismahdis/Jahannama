@@ -1,0 +1,78 @@
+{% extends 'myapp/base.html' %}
+{% load i18n static %}
+
+{% block title %}گالری — جهان نما{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+    <div class="page-hero-bg"></div>
+
+    <div class="container">
+        <h1 class="reveal">
+            {% translate "گالری تصاویر" %}
+        </h1>
+        <p class="reveal reveal-delay-1">
+            {% translate "نگاهی به محصولات و فعالیت‌های ما" %}
+        </p>
+    </div>
+</section>
+
+
+<section class="gallery-section">
+
+    <div class="container">
+
+        {% if images %}
+
+        <div class="gallery-grid">
+
+            {% for item in images %}
+
+            <article class="gallery-item">
+
+                <a href="{{ item.image.url }}"
+                   class="gallery-card">
+
+                    <div class="gallery-image-wrapper">
+
+                        <img
+                            src="{{ item.image.url }}"
+                            alt="{{ item.title|default:'تصویر گالری' }}"
+                            class="gallery-image"
+                            loading="lazy"
+                        >
+
+                        {% if item.title %}
+                        <div class="gallery-overlay">
+                            <h3>{{ item.title }}</h3>
+                            <span>مشاهده تصویر ↗</span>
+                        </div>
+                        {% endif %}
+
+                    </div>
+
+                </a>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+        {% else %}
+
+        <div class="gallery-empty">
+            <h2>{% translate "تصویری وجود ندارد" %}</h2>
+            <p>
+                {% translate "به‌زودی تصاویر جدیدی در این بخش قرار خواهد گرفت." %}
+            </p>
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends 'myapp/base.html' %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %}
+    {% if LANGUAGE_CODE == "en" %}
+        {{ category.name_en }} — Jahan Nama
+    {% elif LANGUAGE_CODE == "ar" %}
+        {{ category.name_ar }} — جهان نما
+    {% else %}
+        {{ category.name }} — جهان نما
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<section class="page-hero page-hero--catalog">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+        <nav class="breadcrumb reveal" aria-label="مسیر">
+            <a href="{% url 'myapp:index' %}">{% translate "خانه" %}</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>
+                {% if LANGUAGE_CODE == "en" %}
+                    {{ category.name_en }}
+
+                {% elif LANGUAGE_CODE == "ar" %}
+                    {{ category.name_ar }}
+
+                {% else %}
+                    {{ category.name }}
+
+                {% endif %}
+            </span>
+        </nav>
+        <h1 class="reveal">
+            {% if LANGUAGE_CODE == "en" %}
+                {{ category.name_en }}
+            {% elif LANGUAGE_CODE == "ar" %}
+                {{ category.name_ar }}
+            {% else %}
+                {{ category.name }}
+            {% endif %}
+        </h1>
+        {% if category.description %}
+        <p class="reveal reveal-delay-1">
+            {% if LANGUAGE_CODE == "en" %}
+                {{ category.description_en }}
+            {% elif LANGUAGE_CODE == "ar" %}
+                {{ category.description_ar }}
+            {% else %}
+                {{ category.description }}
+            {% endif %}
+        </p>
+        {% endif %}
+        <div class="catalog-meta reveal reveal-delay-2">
+<!--            <span class="catalog-badge">{{ products|length }} محصول</span>-->
+            <span class="catalog-badge catalog-badge--gold">{% translate "مجموعه ممتاز" %}</span>
+        </div>
+    </div>
+</section>
+
+<div class="container catalog-section">
+    <div class="catalog-toolbar reveal">
+        <a href="{% url 'myapp:index' %}" class="btn btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            {% translate "بازگشت به دسته‌بندی‌ها" %}
+        </a>
+    </div>
+
+    <div class="products-grid">
+        {% for product in products %}
+        <article class="product-card luxury-card reveal">
+
+            <div class="product-card-image-wrap">
+
+                <img src="{% static product.image %}"
+                    class="product-image"
+                    alt="{{ product.title }}">
+
+            </div>
+
+            <div class="product-info">
+
+<!--                <span class="product-tag">-->
+<!--                    Premium Collection-->
+<!--                </span>-->
+
+                <h3>
+                    {% if LANGUAGE_CODE == "en" %}
+                        {{ product.title_en }}
+
+                    {% elif LANGUAGE_CODE == "ar" %}
+                        {{ product.title_ar }}
+
+                    {% else %}
+                        {{ product.title }}
+
+                    {% endif %}
+
+                </h3>
+
+                <p class="product-desc">
+                    {% if LANGUAGE_CODE == "en" %}
+                        {{ product.description_en }}
+
+                    {% elif LANGUAGE_CODE == "ar" %}
+                        {{ product.description_ar }}
+
+                    {% else %}
+                        {{ product.description }}
+
+                    {% endif %}
+
+                </p>
+
+                <ul class="product-price-row">
+
+                    <li>{% translate "بدون افزودنی و نگهدارنده" %}</li>
+                    <li>{% translate "تهیه شده از گاوهای سالم" %}</li>
+
+                    <li>{% translate "تولید شده با روش سنتی و بهداشتی" %}</li>
+
+                    <li>{% translate "بسته‌بندی استاندارد" %}</li>
+
+                </ul>
+
+                <a href="#" class="product-footer">
+                    {% translate "مشاهده محصول" %}
+                </a>
+
+            </div>
+
+        </article>
+        {% empty %}
+        <div class="empty-state reveal">
+            <div class="empty-state-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>{% translate "محصولی یافت نشد" %}</h3>
+            <p>{% translate "در حال حاضر محصولی در این دسته‌بندی ثبت نشده است." %}</p>
+            <a href="{% url 'myapp:index' %}" class="btn btn-primary">{% translate "بازگشت به خانه" %}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
